@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Lista de compras (6º ano) | Saber & Sabor</title>
+  <meta name="description" content="Saber & Sabor — Educação alimentar criativa."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css"/>
+  
+</head>
+<body>
+<header class="header">
+  <nav class="navbar container" aria-label="Principal">
+    <a class="brand" href="index.html">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Saber &amp; Sabor</span>
+    </a>
+    <div class="nav-links" role="navigation">
+      <a href="compras.html">Lista de compras</a>
+      <a href="temperos.html">Temperos</a>
+      <a href="receitas.html">Receitas sustentáveis</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="influenciadores.html">Influenciadores</a>
+      <a href="jogos.html">Jogos</a>
+      <a href="ia.html">IA &amp; Nutrição</a>
+      <a href="comunidade.html">Comunidade</a>
+      <a href="biblioteca.html">Biblioteca</a>
+    </div>
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-pressed="false" title="Alternar tema">Modo Claro</button>
+      <button id="open-drawer" class="hamburger" aria-label="Abrir menu">☰</button>
+    </div>
+  </nav>
+  <div id="drawer" class="drawer" aria-hidden="true">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
+      <strong style="color:var(--accent);">Menu</strong>
+      <button id="close-drawer" class="hamburger" aria-label="Fechar menu">✕</button>
+    </div>
+    <a href="compras.html">Lista de compras</a>
+    <a href="temperos.html">Temperos</a>
+    <a href="receitas.html">Receitas sustentáveis</a>
+    <a href="podcast.html">Podcast</a>
+    <a href="influenciadores.html">Influenciadores</a>
+    <a href="jogos.html">Jogos</a>
+    <a href="ia.html">IA &amp; Nutrição</a>
+    <a href="comunidade.html">Comunidade</a>
+    <a href="biblioteca.html">Biblioteca</a>
+  </div>
+</header>
+<main class="container">
+
+<section class="hero">
+  <div class="hero-card">
+    <h1>Lista de compras — 6º ano</h1>
+    <p>Exercícios para planejar compras conscientes, comparar preços, ler rótulos e reduzir desperdício.</p>
+    <div class="searchbar">
+      <input id="search-input" type="search" placeholder="Filtrar atividades (ex.: feira, rótulos)">
+    </div>
+  </div>
+  <div class="hero-card">
+    <h2 style="margin-top:0;color:var(--accent)">Objetivos</h2>
+    <ul>
+      <li>Identificar alimentos in natura, minimamente processados e ultraprocessados.</li>
+      <li>Planejar um cardápio simples de 3 dias com orçamento limitado.</li>
+      <li>Comparar preço por quilo/litro e sazonalidade.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="grid">
+  <article class="card searchable">
+    <h3>Atividade 1 — Feira da escola</h3>
+    <p>Crie uma lista de 10 itens sazonais. Pesquise o preço em 2 lugares e calcule o custo total.</p>
+    <p class="muted">Dica: Prefira frutas e verduras da estação para economizar.</p>
+  </article>
+  <article class="card searchable">
+    <h3>Atividade 2 — Desafio do rótulo</h3>
+    <p>Compare dois produtos similares. Leia a lista de ingredientes, açúcar/sódio e origem.</p>
+  </article>
+  <article class="card searchable">
+    <h3>Atividade 3 — Aproveitamento integral</h3>
+    <p>Liste 3 receitas que usem cascas, talos ou sementes (ex.: farofa de talos, chips de casca).</p>
+  </article>
+</div>
+
+<table class="table">
+  <thead>
+    <tr><th>Item</th><th>Unidade</th><th>Preço</th><th>Observação</th></tr>
+  </thead>
+  <tbody>
+    <tr class="searchable"><td>Banana</td><td>kg</td><td>—</td><td>Sazonalidade e maturação</td></tr>
+    <tr class="searchable"><td>Feijão</td><td>kg</td><td>—</td><td>Compare origem e tempo de cozimento</td></tr>
+    <tr class="searchable"><td>Abóbora</td><td>kg</td><td>—</td><td>Aproveite casca e sementes</td></tr>
+  </tbody>
+</table>
+
+</main>
+<footer class="footer">
+  <div class="container wrap">
+    <small>© 2025 Saber &amp; Sabor — projeto educacional interdisciplinar.</small>
+    <div class="brandline">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiLZWENOXOoarJ5Pk0xLf9SW9wA6DiIfJ2_cZuekSzW06kRqyOszqKNiMBkVtBSMnD4m_YJU_m9oaMpqM8gbmbkErxr9D40KBDlDQb0_YK078SyGEFbXXTI7QdDmxBwjp5ADQ2jpcZGweZzEmE3aVYC0-qBSAf4-mb1GXYvYYBS2gALoSYkWZOdWEI8TZM/s1600/%CE%94.D%CE%A3LTA%20Code.png" alt="∆.DΣLTA CODE BRASIL logo">
+      <small>∆.DΣLTA CODE BRASIL</small>
+    </div>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
