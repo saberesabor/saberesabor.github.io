@@ -201,6 +201,39 @@
             background-color: var(--accent-light);
         }
 
+        /* Listas de recursos */
+        .resource-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .resource-list li {
+            padding: 15px;
+            margin-bottom: 10px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .resource-list li i {
+            margin-right: 15px;
+            font-size: 1.2rem;
+            color: var(--accent-light);
+        }
+
+        .resource-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        .resource-link:hover {
+            color: var(--accent-light);
+        }
+
         /* Modo escuro/claro */
         .theme-toggle {
             background: none;
@@ -332,6 +365,10 @@
                         <li><a href="#" data-page="spices">Temperos</a></li>
                         <li><a href="#" data-page="recipes">Livro de Receitas</a></li>
                         <li><a href="#" data-page="podcast">Podcast</a></li>
+                        <li><a href="#" data-page="influencers">Influenciadores</a></li>
+                        <li><a href="#" data-page="games">Jogos</a></li>
+                        <li><a href="#" data-page="nutritionist">Nutricionista</a></li>
+                        <li><a href="#" data-page="library">Biblioteca</a></li>
                     </ul>
                 </nav>
                 <button class="theme-toggle" aria-label="Alternar modo claro/escuro">
@@ -359,7 +396,7 @@
                             <i class="fas fa-apple-alt"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Dicas nutricionais</h3>
+                            <h3>Dicas da Nutricionista</h3>
                             <p>Conselhos profissionais para uma alimentação balanceada e saudável no seu dia a dia.</p>
                             <a href="#" class="btn" data-page="nutritionist">Ver Dicas</a>
                         </div>
@@ -371,7 +408,7 @@
                         </div>
                         <div class="card-content">
                             <h3>Jogos Educativos</h3>
-                            <p>Divirta-se e aprenda com jogos sobre alimentação</p>
+                            <p>Divirta-se e aprenda com jogos sobre alimentação criados pelos nossos alunos.</p>
                             <a href="#" class="btn" data-page="games">Jogar Agora</a>
                         </div>
                     </div>
@@ -401,7 +438,11 @@
                         </div>
                         <div class="card-content">
                             <h3>Hortifruti</h3>
-                            <p>Frutas e verduras da estação, preferencialmente orgânicas e locais.</p>
+                            <ul>
+                                <li>Frutas da estação (preferencialmente orgânicas)</li>
+                                <li>Verduras e legumes locais</li>
+                                <li>Ervas frescas (salsinha, cebolinha, manjericão)</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -411,7 +452,27 @@
                         </div>
                         <div class="card-content">
                             <h3>Proteínas</h3>
-                            <p>Fontes sustentáveis de proteína: ovos caipiras, leguminosas, peixes de origem certificada.</p>
+                            <ul>
+                                <li>Ovos caipiras ou orgânicos</li>
+                                <li>Feijão, lentilha, grão-de-bico</li>
+                                <li>Peixes de origem sustentável</li>
+                                <li>Frango caipira</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Grãos e Cereais</h3>
+                            <ul>
+                                <li>Arroz integral</li>
+                                <li>Quinoa</li>
+                                <li>Aveia</li>
+                                <li>Farinhas integrais</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -420,8 +481,13 @@
                             <i class="fas fa-shield-alt"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Dicas de Consumo</h3>
-                            <p>Como evitar desperdício, escolher embalagens ejetáveis e priorizar produtos locais.</p>
+                            <h3>Dicas de Consumo Consciente</h3>
+                            <ul>
+                                <li>Prefira produtos locais e da estação</li>
+                                <li>Evite embalagens desnecessárias</li>
+                                <li>Planeje as compras para evitar desperdício</li>
+                                <li>Leve sacolas reutilizáveis</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -439,7 +505,13 @@
                         </div>
                         <div class="card-content">
                             <h3>Ervas Frescas</h3>
-                            <p>Manjericão, salsinha, cebolinha, coentro e mais - como cultivar e usar.</p>
+                            <ul>
+                                <li><strong>Manjericão:</strong> ideal para molhos, pizzas e saladas</li>
+                                <li><strong>Salsinha:</strong> versátil, combina com quase tudo</li>
+                                <li><strong>Cebolinha:</strong> perfeita para omeletes e patês</li>
+                                <li><strong>Coentro:</strong> essencial na comida mexicana e nordestina</li>
+                                <li><strong>Hortelã:</strong> refrescante, ótima para drinks e saladas</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -449,7 +521,13 @@
                         </div>
                         <div class="card-content">
                             <h3>Temperos Secos</h3>
-                            <p>Pimenta, cominho, curry, paprika e outros - usos e benefícios.</p>
+                            <ul>
+                                <li><strong>Pimenta:</strong> variedades como do reino, caiena e dedo-de-moça</li>
+                                <li><strong>Cominho:</strong> aroma terroso, comum na culinária árabe e mexicana</li>
+                                <li><strong>Curry:</strong> mistura de especiarias indianas</li>
+                                <li><strong>Paprica:</strong> doce ou picante, dá cor e sabor</li>
+                                <li><strong>Açafrão:</strong> anti-inflamatório e de cor vibrante</li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -458,8 +536,29 @@
                             <i class="fas fa-blender"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Preparações</h3>
-                            <p>Como fazer temperos caseiros, marinadas e molhos especiais.</p>
+                            <h3>Preparações Caseiras</h3>
+                            <ul>
+                                <li><strong>Tempero verde:</strong> salsinha, cebolinha, alho e limão</li>
+                                <li><strong>Sal de ervas:</strong> mix de ervas desidratadas com sal marinho</li>
+                                <li><strong>Óleos aromatizados:</strong> azeite com alecrim, alho ou pimenta</li>
+                                <li><strong>Pesto:</strong> manjericão, alho, pinoli, queijo e azeite</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Benefícios dos Temperos Naturais</h3>
+                            <ul>
+                                <li>Reduzem a necessidade de sal</li>
+                                <li>Possuem propriedades anti-inflamatórias</li>
+                                <li>Auxiliam na digestão</li>
+                                <li>Fortalecem o sistema imunológico</li>
+                                <li>Adicionam antioxidantes à alimentação</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -477,8 +576,13 @@
                         </div>
                         <div class="card-content">
                             <h3>Pratos Principais</h3>
-                            <p>Refeições completas com aproveitamento integral dos alimentos.</p>
-                            <a href="#" class="btn">Ver Receitas</a>
+                            <ul>
+                                <li>Lasanha de berinjela com aproveitamento integral</li>
+                                <li>Quibe de abóbora com folhas de beterraba</li>
+                                <li>Moqueca de banana da terra verde</li>
+                                <li>Strogonoff de cogumelos com talos de legumes</li>
+                            </ul>
+                            <a href="#" class="btn">Ver Receitas Completas</a>
                         </div>
                     </div>
                     
@@ -487,9 +591,30 @@
                             <i class="fas fa-cookie"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Sobremesas</h3>
-                            <p>Doces saborosos com baixo teor de açúcar e aproveitamento de frutas.</p>
-                            <a href="#" class="btn">Ver Receitas</a>
+                            <h3>Sobremesas Sustentáveis</h3>
+                            <ul>
+                                <li>Bolo de casca de banana com canela</li>
+                                <li>Brigadeiro de casca de melancia</li>
+                                <li>Cookies de biomassa de banana verde</li>
+                                <li>Mousse de chocolate com abacate</li>
+                            </ul>
+                            <a href="#" class="btn">Ver Receitas Completas</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-blender"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sucos e Bebidas</h3>
+                            <ul>
+                                <li>Suco detox de talos e folhas</li>
+                                <li>Chá de casca de abacaxi com gengibre</li>
+                                <li>Água saborizada com restos de frutas</li>
+                                <li>Vitamina de polpa de frutas congeladas</li>
+                            </ul>
+                            <a href="#" class="btn">Ver Receitas Completas</a>
                         </div>
                     </div>
                     
@@ -498,9 +623,15 @@
                             <i class="fas fa-recycle"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Zero Desperdício</h3>
-                            <p>Receitas que utilizam partes não convencionais dos alimentos.</p>
-                            <a href="#" class="btn">Ver Receitas</a>
+                            <h3>Aproveitamento Integral</h3>
+                            <p>Dicas para utilizar cascas, talos, sementes e folhas:</p>
+                            <ul>
+                                <li>Farofa de casca de mandioca</li>
+                                <li>Pesto de talos de couve e salsa</li>
+                                <li>Patê de sementes de abóbora</li>
+                                <li>Chips de cascas de batata e inhame</li>
+                            </ul>
+                            <a href="#" class="btn">Ver Receitas Completas</a>
                         </div>
                     </div>
                 </div>
@@ -509,17 +640,42 @@
             <!-- Podcast -->
             <section id="podcast" class="page">
                 <h2 class="page-title">Podcast Saber & Sabor</h2>
-                <p>Ouça nossas conversas sobre alimentação saudável, sustentabilidade e cultura alimentar.</p>
+                <p>Ouça nossas conversas sobre alimentação saudável, sustentabilidade e cultura alimentar, além de recomendações de podcasts especializados em nutrição.</p>
                 
                 <div class="card-grid">
                     <div class="card">
                         <div class="card-img">
-                            <i class="fas fa-headphones"></i>
+                            <i class="fas fa-podcast"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Episódios Recentes</h3>
-                            <p>Confira os últimos episódios do nosso podcast.</p>
-                            <a href="#" class="btn">Ouvir Agora</a>
+                            <h3>Podcasts sobre Nutrição</h3>
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://open.spotify.com/show/41yhlBIIIpsOLLnnJJrrk4" class="resource-link" target="_blank">
+                                        <i class="fas fa-headphones"></i> Alimente: Nutrição e Ciência
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://open.spotify.com/show/6WCMX1rhF9juJcNMWX6WFp" class="resource-link" target="_blank">
+                                        <i class="fas fa-headphones"></i> Na Cadeira da Papa
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://open.spotify.com/show/41yhlBIIIpsOLLnnJJrrk4" class="resource-link" target="_blank">
+                                        <i class="fas fa-headphones"></i> Prato Cheio – O Joio e o Trigo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://open.spotify.com/show/6WCMX1rhF9juJcNMWX6WFp" class="resource-link" target="_blank">
+                                        <i class="fas fa-headphones"></i> DrauzioCast
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://open.spotify.com/show/6WCMX1rhF9juJcNMWX6WFp" class="resource-link" target="_blank">
+                                        <i class="fas fa-headphones"></i> Alimentacast
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -528,9 +684,15 @@
                             <i class="fas fa-microphone"></i>
                         </div>
                         <div class="card-content">
-                            <h3>Entrevistas</h3>
-                            <p>Conversas com nutricionistas, chefs e produtores locais.</p>
-                            <a href="#" class="btn">Ouvir Entrevistas</a>
+                            <h3>Nossos Episódios</h3>
+                            <ul>
+                                <li>Ep. 15: Alimentação escolar e sua importância</li>
+                                <li>Ep. 14: Hortas urbanas e comunitárias</li>
+                                <li>Ep. 13: Entrevista com nutricionista escolar</li>
+                                <li>Ep. 12: Mitos e verdades sobre orgânicos</li>
+                                <li>Ep. 11: Como ler rótulos de alimentos</li>
+                            </ul>
+                            <a href="#" class="btn">Ouvir Todos os Episódios</a>
                         </div>
                     </div>
                     
@@ -540,48 +702,270 @@
                         </div>
                         <div class="card-content">
                             <h3>Participação dos Alunos</h3>
-                            <p>Programas apresentados e produzidos pelos estudantes.</p>
+                            <p>Programas apresentados e produzidos pelos estudantes:</p>
+                            <ul>
+                                <li>"Minha Receita Preferida" - Ep. 5</li>
+                                <li>"Desafio Zero Desperdício" - Ep. 8</li>
+                                <li>"Horta na Escola" - Ep. 10</li>
+                                <li>"Entrevista com Merendeira" - Ep. 12</li>
+                            </ul>
                             <a href="#" class="btn">Ouvir Programas</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Adicione as outras páginas seguindo o mesmo padrão -->
+            <!-- Influenciadores -->
             <section id="influencers" class="page">
-                <h2 class="page-title">Influenciadores</h2>
+                <h2 class="page-title">Influenciadores & Canais de Nutrição</h2>
                 <p>Conheça os criadores de conteúdo que inspiram nossa comunidade com dicas de alimentação saudável e sustentável.</p>
-                <!-- Conteúdo a ser desenvolvido -->
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Canais no YouTube</h3>
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://www.youtube.com/nutricionistapatricialeite" class="resource-link" target="_blank">
+                                        <i class="fab fa-youtube"></i> Nutricionista Patricia Leite
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/anniebellophd" class="resource-link" target="_blank">
+                                        <i class="fab fa-youtube"></i> Annie Bello, Nutricionista PhD
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/canalvpnutricaofuncional" class="resource-link" target="_blank">
+                                        <i class="fab fa-youtube"></i> Canal VP - Nutrição Funcional
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/watch?v=dtxeIFg74XQ" class="resource-link" target="_blank">
+                                        <i class="fab fa-youtube"></i> Mariana Weckerle (Guria Natureba)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Influenciadores Brasileiros</h3>
+                            <ul>
+                                <li>@nutricionistaamanda - Dicas práticas para o dia a dia</li>
+                                <li>@cozinhasustentavel - Receitas com aproveitamento integral</li>
+                                <li>@nutriplanet - Nutrição baseada em evidências científicas</li>
+                                <li>@chefconsciente - Gastronomia sustentável e acessível</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Hashtags para Seguir</h3>
+                            <ul>
+                                <li>#alimentacaosaudavel</li>
+                                <li>#comidadeverdade</li>
+                                <li>#hortaemcasa</li>
+                                <li>#semdesperdicio</li>
+                                <li>#consumoconsciente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            <!-- Jogos -->
             <section id="games" class="page">
-                <h2 class="page-title">Jogos</h2>
-                <p>Divirta-se com jogos educativos sobre alimentação criados pelos nossos alunos.</p>
-                <!-- Conteúdo a ser desenvolvido -->
+                <h2 class="page-title">Jogos Educativos</h2>
+                <p>Divirta-se e aprenda com jogos sobre alimentação criados pelos nossos alunos.</p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Jogos dos Alunos</h3>
+                            <ul>
+                                <li>Quiz da Pirâmide Alimentar</li>
+                                <li>Memória dos Alimentos Regionais</li>
+                                <li>Tabuleiro da Alimentação Saudável</li>
+                                <li>Quebra-cabeça da Horta</li>
+                            </ul>
+                            <a href="#" class="btn">Jogar Agora</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Jogos Online Recomendados</h3>
+                            <ul>
+                                <li>Food Force (Programa Mundial de Alimentos)</li>
+                                <li>My Plate Match Game (USDA)</li>
+                                <li>Comida de Verdade (Instituto Akatu)</li>
+                                <li>Jogo da Memória - Alimentos Brasileiros</li>
+                            </ul>
+                            <a href="#" class="btn">Jogar Agora</a>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-dice"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Jogos de Tabuleiro</h3>
+                            <ul>
+                                <li>Alimente-se Bem - Jogo da Memória</li>
+                                <li>Trilha da Alimentação Saudável</li>
+                                <li>Dominó das Frutas e Verduras</li>
+                                <li>Jogo da Velha Nutritivo</li>
+                            </ul>
+                            <a href="#" class="btn">Ver Regras</a>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="ai" class="page">
-                <h2 class="page-title">Inteligência Artificial</h2>
-                <p>Descubra como a IA está transformando a alimentação e a nutrição.</p>
-                <!-- Conteúdo a ser desenvolvido -->
-            </section>
-
+            <!-- Dicas da Nutricionista -->
             <section id="nutritionist" class="page">
                 <h2 class="page-title">Dicas da Nutricionista</h2>
-                <p>Conselhos profissionais para uma alimentação balanceada e saudável.</p>
-                <!-- Conteúdo a ser desenvolvido -->
+                <p>Conselhos profissionais para uma alimentação balanceada e saudável no seu dia a dia.</p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-apple-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Alimentação Saudável</h3>
+                            <ul>
+                                <li>Consuma pelo menos 5 porções de frutas e hortaliças por dia</li>
+                                <li>Prefira alimentos integrais aos refinados</li>
+                                <li>Reduza o consumo de sal, açúcar e gorduras</li>
+                                <li>Beba pelo menos 2 litros de água por dia</li>
+                                <li>Faça refeições coloridas e variadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Dicas Práticas</h3>
+                            <ul>
+                                <li>Planeje suas refeições com antecedência</li>
+                                <li>Faça compras após se alimentar</li>
+                                <li>Leve lanches saudáveis quando sair de casa</li>
+                                <li>Inclua as crianças no preparo das refeições</li>
+                                <li>Coma devagar e mastigue bem os alimentos</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Alimentação Escolar</h3>
+                            <ul>
+                                <li>Incentive o consumo da merenda escolar</li>
+                                <li>Prepare lancheiras equilibradas e criativas</li>
+                                <li>Inclua frutas picadas e fáceis de consumir</li>
+                                <li>Use recipientes adequados para manter a temperatura</li>
+                                <li>Evite sucos industrializados e refrigerantes</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Livros Recomendados</h3>
+                            <ul class="resource-list">
+                                <li><i class="fas fa-book"></i> Nutrição: Conceitos e Controvérsias</li>
+                                <li><i class="fas fa-book"></i> Você é o que Você Come: O Poder da Alimentação Natural (Gillian McKeith)</li>
+                                <li><i class="fas fa-book"></i> Entendendo a Gordura: Os Ácidos Graxos</li>
+                                <li><i class="fas fa-book"></i> Tabela para Composição de Alimentos: Suporte para Decisão Nutricional</li>
+                                <li><i class="fas fa-book"></i> Nutrição Comportamental</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="community" class="page">
-                <h2 class="page-title">Comunidade</h2>
-                <p>Participe da nossa comunidade e compartilhe experiências e receitas.</p>
-                <!-- Conteúdo a ser desenvolvido -->
-            </section>
-
+            <!-- Biblioteca de Sugestões -->
             <section id="library" class="page">
                 <h2 class="page-title">Biblioteca de Sugestões</h2>
                 <p>Indicações de livros e filmes sobre alimentação, sustentabilidade e saúde.</p>
-                <!-- Conteúdo a ser desenvolvido -->
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Livros sobre Nutrição</h3>
+                            <ul class="resource-list">
+                                <li><i class="fas fa-book"></i> Nutrição: Conceitos e Controvérsias</li>
+                                <li><i class="fas fa-book"></i> Você é o que Você Come: O Poder da Alimentação Natural (Gillian McKeith)</li>
+                                <li><i class="fas fa-book"></i> Entendendo a Gordura: Os Ácidos Graxos</li>
+                                <li><i class="fas fa-book"></i> Tabela para Composição de Alimentos: Suporte para Decisão Nutricional</li>
+                                <li><i class="fas fa-book"></i> Nutrição Comportamental</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Filmes e Documentários</h3>
+                            <ul>
+                                <li>Food, Inc. - O que há por trás do que comemos</li>
+                                <li>Fed Up - A indústria do açúcar</li>
+                                <li>Super Size Me - A dieta do palhaço</li>
+                                <li>Sustainable - A comida sustentável</li>
+                                <li>What the Health - Os segredos da indústria alimentícia</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Sites e Blogs</h3>
+                            <ul>
+                                <li>Ministério da Saúde - Guia Alimentar</li>
+                                <li>Instituto Brasileiro de Geografia e Estatística - Pesquisas alimentares</li>
+                                <li>Organização Pan-Americana da Saúde - Materiais educativos</li>
+                                <li>Food Revolution - Jamie Oliver</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -618,6 +1002,9 @@
                 
                 // Fecha o menu mobile se estiver aberto
                 document.getElementById('main-nav').classList.remove('show');
+                
+                // Scroll para o topo
+                window.scrollTo(0, 0);
             });
         });
 
@@ -653,4 +1040,4 @@
         });
     </script>
 </body>
-</html>s
+</html>
