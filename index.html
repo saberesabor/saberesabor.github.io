@@ -305,6 +305,190 @@
             color: var(--text-secondary);
         }
 
+        /* Páginas de conteúdo */
+        .content-page {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Jogo */
+        .game-container {
+            background: linear-gradient(135deg, #6aab9c, #9de0ad);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .game-content {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 800px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .game-title {
+            color: #2c6e49;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        
+        .game-subtitle {
+            color: #4c956c;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        
+        .game-screen {
+            display: none;
+            padding: 20px;
+        }
+        
+        .game-start-screen {
+            display: block;
+        }
+        
+        .game-btn {
+            background: linear-gradient(to right, #4c956c, #2c6e49);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .game-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .game-btn:active {
+            transform: translateY(0);
+        }
+        
+        .game-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .score-board {
+            display: flex;
+            justify-content: space-between;
+            background-color: #fefee3;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            color: #2c6e49;
+            font-weight: bold;
+        }
+        
+        .food-item {
+            background: linear-gradient(135deg, #ff9e6d, #ffd8be);
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #7c4d03;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .category {
+            background-color: #d8f3dc;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: grab;
+            flex: 1;
+            min-width: 120px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category:hover {
+            transform: scale(1.05);
+            background-color: #b7e4c7;
+        }
+        
+        .feedback {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            display: none;
+        }
+        
+        .correct {
+            background-color: #d8f3dc;
+            color: #2c6e49;
+        }
+        
+        .incorrect {
+            background-color: #ffccd5;
+            color: #a4133c;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(to right, #4c956c, #2c6e49);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        
+        .food-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .result-screen h2 {
+            color: #2c6e49;
+            margin-bottom: 20px;
+        }
+        
+        .result-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .nutri-fact {
+            background-color: #fefee3;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
         /* Responsividade */
         @media (max-width: 768px) {
             .header-content {
@@ -344,6 +528,19 @@
             .card-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .categories {
+                flex-direction: column;
+            }
+            
+            .game-title {
+                font-size: 2rem;
+            }
+            
+            .game-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -369,6 +566,7 @@
                         <li><a href="#" data-page="games">Jogos</a></li>
                         <li><a href="#" data-page="nutritionist">Nutricionista</a></li>
                         <li><a href="#" data-page="library">Biblioteca</a></li>
+                        <li><a href="#" data-page="about">Sobre</a></li>
                     </ul>
                 </nav>
                 <button class="theme-toggle" aria-label="Alternar modo claro/escuro">
@@ -507,7 +705,7 @@
                             <h3>Ervas Frescas</h3>
                             <ul>
                                 <li><strong>Manjericão:</strong> ideal para molhos, pizzas e saladas</li>
-                                <li><strong>Salsinha:</strong> versátil, combina com quase tudo</li>
+                                <li><strong>Salsinha:</strong> versátel, combina com quase tudo</li>
                                 <li><strong>Cebolinha:</strong> perfeita para omeletes e patês</li>
                                 <li><strong>Coentro:</strong> essencial na comida mexicana e nordestina</li>
                                 <li><strong>Hortelã:</strong> refrescante, ótima para drinks e saladas</li>
@@ -803,7 +1001,7 @@
                                 <li>Tabuleiro da Alimentação Saudável</li>
                                 <li>Quebra-cabeça da Horta</li>
                             </ul>
-                            <a href="#" class="btn">Jogar Agora</a>
+                            <a href="#" class="btn" id="play-nutrigame">Jogar NutriGame</a>
                         </div>
                     </div>
                     
@@ -839,6 +1037,67 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Área do NutriGame (inicialmente oculta) -->
+                <div id="nutrigame-container" style="display: none; margin-top: 40px;">
+                    <div class="game-container">
+                        <div class="game-content">
+                            <h1 class="game-title">NutriGame</h1>
+                            <p class="game-subtitle">Aprenda sobre nutrição de forma divertida!</p>
+                            
+                            <div id="start-screen" class="game-screen game-start-screen">
+                                <div class="food-icon">🥗</div>
+                                <h2>Bem-vindo ao NutriGame!</h2>
+                                <p>Classifique os alimentos em suas categorias nutricionais corretas.<br>
+                                Teste seus conhecimentos sobre alimentação saudável!</p>
+                                <button id="start-btn" class="game-btn">Começar Jogo</button>
+                            </div>
+                            
+                            <div id="game-screen" class="game-screen">
+                                <div class="score-board">
+                                    <div>Pontuação: <span id="score">0</span></div>
+                                    <div>Alimentos: <span id="food-count">0</span>/10</div>
+                                </div>
+                                
+                                <div class="progress-bar">
+                                    <div class="progress" id="progress"></div>
+                                </div>
+                                
+                                <div class="food-item">
+                                    <div class="food-icon" id="current-food-icon">🍎</div>
+                                    <div id="current-food">Maçã</div>
+                                </div>
+                                
+                                <div class="categories">
+                                    <div class="category" data-category="carboidratos">Carboidratos</div>
+                                    <div class="category" data-category="proteinas">Proteínas</div>
+                                    <div class="category" data-category="vitaminas">Vitaminas & Fibras</div>
+                                    <div class="category" data-category="gorduras">Gorduras Saudáveis</div>
+                                </div>
+                                
+                                <div id="feedback" class="feedback"></div>
+                            </div>
+                            
+                            <div id="result-screen" class="game-screen">
+                                <h2>Parabéns! Você completou o NutriGame!</h2>
+                                <div class="food-icon">🏆</div>
+                                
+                                <div class="result-info">
+                                    <h3>Sua Pontuação: <span id="final-score">0</span>/10</h3>
+                                    <p id="result-message">Mensagem sobre seu desempenho</p>
+                                </div>
+                                
+                                <div class="nutri-fact">
+                                    <h3>Você Sabia?</h3>
+                                    <p id="nutri-fact-text">Fato interessante sobre nutrição</p>
+                                </div>
+                                
+                                <button id="restart-btn" class="game-btn">Jogar Novamente</button>
+                                <button id="back-btn" class="game-btn">Voltar para Jogos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Dicas da Nutricionista -->
@@ -857,7 +1116,7 @@
                                 <li>Consuma pelo menos 5 porções de frutas e hortaliças por dia</li>
                                 <li>Prefira alimentos integrais aos refinados</li>
                                 <li>Reduza o consumo de sal, açúcar e gorduras</li>
-                                <li>Beba pelo menos 2 litros de água por dia</li>
+                                <li>Beba pelo menos 2 litros de água por day</li>
                                 <li>Faça refeições coloridas e variadas</li>
                             </ul>
                         </div>
@@ -967,6 +1226,47 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Sobre -->
+            <section id="about" class="page">
+                <h2 class="page-title">Sobre o Saber & Sabor</h2>
+                <div class="content-page">
+                    <p>O Saber & Sabor é um projeto educacional que une alimentação saudável, sustentabilidade e educação nutricional.</p>
+                    <p>Nosso objetivo é promover hábitos alimentares mais conscientes e saudáveis através de recursos educativos, receitas sustentáveis e atividades interativas.</p>
+                    <p>Este projeto é desenvolvido em parceria com a ∆.DΣLTA CODE BRASIL.</p>
+                    <a href="https://deltacodebrasil.blogspot.com/" class="btn" target="_blank">Visite o Blog ∆.DΣLTA CODE</a>
+                    
+                    <h3 style="margin-top: 30px;">Contato</h3>
+                    <p>Entre em contato conosco para mais informações sobre o projeto:</p>
+                    <a href="https://deltacodebrasil.blogspot.com/" class="btn" target="_blank">Página de Contato</a>
+                </div>
+            </section>
+
+            <!-- Política de Privacidade -->
+            <section id="privacy" class="page">
+                <h2 class="page-title">Política de Privacidade</h2>
+                <div class="content-page">
+                    <h2><span style="color: rgb(68, 68, 68);">Política Privacidade</span></h2>
+                    <p><span style="color: rgb(68, 68, 68);">A sua privacidade é importante para nós. É política do Saber & Sabor respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <a href="https://saberesabor.github.io/">Saber & Sabor</a>, e outros sites que possuímos e operamos.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);">Solicitamos informações pessoais apenas quando realmente precisamos deles para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);">Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);">Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, excepto quando exigido por lei.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);">O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas&nbsp;</span><a href="https://politicaprivacidade.com/" rel="noopener noreferrer" target="_blank" style="background-color: transparent; color: rgb(68, 68, 68);">políticas de privacidade</a><span style="color: rgb(68, 68, 68);">.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);">Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);">O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);"></span></p>
+                    <h3><span style="color: rgb(68, 68, 68);">Compromisso do Usuário</span></h3>
+                    <p><span style="color: rgb(68, 68, 68);">O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Saber & Sabor oferece no site e com caráter enunciativo, mas não limitativo:</span></p>
+                    <ul>
+                        <li><span style="color: rgb(68, 68, 68);">A) Não se envolver em actividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</span></li>
+                        <li><span style="color: rgb(68, 68, 68);">B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</span></li>
+                        <li><span style="color: rgb(68, 68, 68);">C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Saber & Sabor, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</span></li>
+                    </ul>
+                    <h3><span style="color: rgb(68, 68, 68);">Mais informações</span></h3>
+                    <p><span style="color: rgb(68, 68, 68);">Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</span></p>
+                    <p><span style="color: rgb(68, 68, 68);">Esta política é efetiva a partir de&nbsp;25 August 2025 23:31</span></p>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -977,9 +1277,9 @@
                 <p>∆.DΣLTA CODE BRASIL</p>
             </div>
             <div class="footer-links">
-                <a href="#">Sobre</a>
-                <a href="#">Contato</a>
-                <a href="#">Privacidade</a>
+                <a href="#" data-page="about">Sobre</a>
+                <a href="https://deltacodebrasil.blogspot.com/" target="_blank">Contato</a>
+                <a href="#" data-page="privacy">Privacidade</a>
             </div>
             <p class="copyright">&copy; 2023 Saber & Sabor - Todos os direitos reservados</p>
         </div>
@@ -1005,6 +1305,11 @@
                 
                 // Scroll para o topo
                 window.scrollTo(0, 0);
+                
+                // Se for a página de jogos, esconde o NutriGame
+                if (targetPage !== 'games') {
+                    document.getElementById('nutrigame-container').style.display = 'none';
+                }
             });
         });
 
@@ -1038,6 +1343,172 @@
                 themeIcon.classList.add('fa-moon');
             }
         });
+
+        // NutriGame - Lógica do jogo
+        document.getElementById('play-nutrigame').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('nutrigame-container').style.display = 'block';
+            window.scrollTo(0, document.getElementById('nutrigame-container').offsetTop);
+        });
+
+        // Dados do jogo
+        const foods = [
+            { name: "Maçã", icon: "🍎", category: "vitaminas" },
+            { name: "Arroz", icon: "🍚", category: "carboidratos" },
+            { name: "Frango", icon: "🍗", category: "proteinas" },
+            { name: "Abacate", icon: "🥑", category: "gorduras" },
+            { name: "Brócolis", icon: "🥦", category: "vitaminas" },
+            { name: "Ovo", icon: "🥚", category: "proteinas" },
+            { name: "Pão", icon: "🍞", category: "carboidratos" },
+            { name: "Salmão", icon: "🐟", category: "gorduras" },
+            { name: "Espinafre", icon: "🍃", category: "vitaminas" },
+            { name: "Azeite", icon: "🫒", category: "gorduras" },
+            { name: "Batata", icon: "🥔", category: "carboidratos" },
+            { name: "Carne", icon: "🥩", category: "proteinas" },
+            { name: "Nozes", icon: "🌰", category: "gorduras" },
+            { name: "Laranja", icon: "🍊", category: "vitaminas" },
+            { name: "Peixe", icon: "🐠", category: "proteinas" }
+        ];
+
+        const nutriFacts = [
+            "Alimentos ricos em vitaminas e fibras ajudam na digestão e previnem doenças!",
+            "Carboidratos são a principal fonte de energia para o nosso corpo!",
+            "Proteínas são essenciais para a construção e reparação dos músculos!",
+            "Gorduras saudáveis são importantes para a saúde do cérebro e absorção de vitaminas!",
+            "Consumir uma variedade de alimentos coloridos garante diversidade de nutrientes!",
+            "Beber água é fundamental para o transporte de nutrientes no organismo!"
+        ];
+
+        // Variáveis do jogo
+        let currentFoodIndex = 0;
+        let score = 0;
+        let gameFoods = [];
+        
+        // Elementos do DOM do jogo
+        const startScreen = document.getElementById('start-screen');
+        const gameScreen = document.getElementById('game-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const startBtn = document.getElementById('start-btn');
+        const restartBtn = document.getElementById('restart-btn');
+        const backBtn = document.getElementById('back-btn');
+        const scoreElement = document.getElementById('score');
+        const foodCountElement = document.getElementById('food-count');
+        const currentFoodElement = document.getElementById('current-food');
+        const currentFoodIcon = document.getElementById('current-food-icon');
+        const feedbackElement = document.getElementById('feedback');
+        const progressElement = document.getElementById('progress');
+        const finalScoreElement = document.getElementById('final-score');
+        const resultMessageElement = document.getElementById('result-message');
+        const nutriFactElement = document.getElementById('nutri-fact-text');
+        const categoryElements = document.querySelectorAll('.category');
+        
+        // Iniciar o jogo
+        startBtn.addEventListener('click', startGame);
+        restartBtn.addEventListener('click', startGame);
+        backBtn.addEventListener('click', function() {
+            document.getElementById('nutrigame-container').style.display = 'none';
+        });
+        
+        // Adicionar event listeners para categorias
+        categoryElements.forEach(category => {
+            category.addEventListener('click', () => {
+                checkAnswer(category.dataset.category);
+            });
+        });
+        
+        function startGame() {
+            // Reiniciar variáveis
+            currentFoodIndex = 0;
+            score = 0;
+            scoreElement.textContent = score;
+            foodCountElement.textContent = "0";
+            progressElement.style.width = "0%";
+            
+            // Embaralhar alimentos
+            gameFoods = [...foods].sort(() => Math.random() - 0.5).slice(0, 10);
+            
+            // Mostrar tela de jogo
+            startScreen.style.display = 'none';
+            resultScreen.style.display = 'none';
+            gameScreen.style.display = 'block';
+            
+            // Mostrar primeiro alimento
+            showNextFood();
+        }
+        
+        function showNextFood() {
+            if (currentFoodIndex >= gameFoods.length) {
+                endGame();
+                return;
+            }
+            
+            const currentFood = gameFoods[currentFoodIndex];
+            currentFoodElement.textContent = currentFood.name;
+            currentFoodIcon.textContent = currentFood.icon;
+            foodCountElement.textContent = `${currentFoodIndex + 1}/10`;
+            
+            // Atualizar barra de progresso
+            progressElement.style.width = `${((currentFoodIndex + 1) / 10) * 100}%`;
+            
+            // Esconder feedback
+            feedbackElement.style.display = 'none';
+        }
+        
+        function checkAnswer(selectedCategory) {
+            const currentFood = gameFoods[currentFoodIndex];
+            const isCorrect = selectedCategory === currentFood.category;
+            
+            if (isCorrect) {
+                score++;
+                scoreElement.textContent = score;
+                showFeedback("Correto! 👍", "correct");
+            } else {
+                showFeedback(`Ops! ${currentFood.name} é da categoria ${getCategoryName(currentFood.category)}.`, "incorrect");
+            }
+            
+            // Avançar para o próximo alimento após um breve delay
+            setTimeout(() => {
+                currentFoodIndex++;
+                showNextFood();
+            }, 2000);
+        }
+        
+        function showFeedback(message, type) {
+            feedbackElement.textContent = message;
+            feedbackElement.className = `feedback ${type}`;
+            feedbackElement.style.display = 'block';
+        }
+        
+        function getCategoryName(categoryKey) {
+            const categoryNames = {
+                "carboidratos": "Carboidratos",
+                "proteinas": "Proteínas",
+                "vitaminas": "Vitaminas & Fibras",
+                "gorduras": "Gorduras Saudáveis"
+            };
+            return categoryNames[categoryKey];
+        }
+        
+        function endGame() {
+            // Atualizar elementos da tela de resultados
+            finalScoreElement.textContent = score;
+            
+            if (score >= 8) {
+                resultMessageElement.textContent = "Excelente! Você conhece muito sobre nutrição!";
+            } else if (score >= 5) {
+                resultMessageElement.textContent = "Muito bom! Mas ainda pode aprender mais sobre alimentação saudável.";
+            } else {
+                resultMessageElement.textContent = "Continue aprendendo sobre nutrição e tente novamente!";
+            }
+            
+            // Mostrar um fato nutricional aleatório
+            const randomFact = nutriFacts[Math.floor(Math.random() * nutriFacts.length)];
+            nutriFactElement.textContent = randomFact;
+            
+            // Mostrar tela de resultados
+            gameScreen.style.display = 'none';
+            resultScreen.style.display = 'block';
+        }
     </script>
 </body>
 </html>
